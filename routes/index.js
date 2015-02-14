@@ -8,7 +8,7 @@ var json = {};
 var cAndCFeed = "http://www.calendarwiz.com/calendars/rssfeeder.xml?crd=cityofhonolulu&len=200&days=30&events=100&title=Calendar%20Events&cat=87163";
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index');
 });
 
 

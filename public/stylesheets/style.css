@@ -10,6 +10,17 @@ html, body {
         font-family: "Trebuchet MS";
       }
 
-#maps {
-  height: 180px;
+#map {
+  /*height: 180px;*/
+}
+
+#map .titlePane {
+  height: 2em;
+}
+
+#map .title {
+  /*TODO: check base font size*/
+  font-size: 12px;
+  line-height: 2em;
+  color: #FFF;
 }

@@ -2,21 +2,29 @@ extends layout
 
 block content
   header.bar.bar-nav
-        h1.title Dodge
+    h1.title Dodge
   div.content
     p.content-padded Event-based traffic avoidance.
     div#map.content-padded
+
+    div.segmented-control
+      a.control-item.active(href="#today") Today
+      a.control-item(href="#tomorrow") Tomorrow
+      
     div.card
-        ul.table-view
-          li.table-view-cell
-            a.push-right(href="#")
-              strong Ratchet docs
-          li.table-view-cell
-            a.push-right(href="#")
-              strong Ratchet docs
-          li.table-view-cell
-            a.push-right(href="#")
-              strong Ratchet docs
-          li.table-view-cell
-            a.push-right(href="#")
-              strong Ratchet docs
+      span#today.control-content.active Valentine's Day Generic Event
+      span#tomorrow.control-content Chinese New Year's Festival
+
+      //- ul.table-view
+      //-   li.table-view-cell
+      //-     a.push-right(href="#")
+      //-       strong Ratchet docs
+      //-   li.table-view-cell
+      //-     a.push-right(href="#")
+      //-       strong Ratchet docs
+      //-   li.table-view-cell
+      //-     a.push-right(href="#")
+      //-       strong Ratchet docs
+      //-   li.table-view-cell
+      //-     a.push-right(href="#")
+      //-       strong Ratchet docs

@@ -16,34 +16,34 @@ function parseString(objString) {
 
   // LOCATION
   thisEvent.location = stringyThing.slice(stringyThing.indexOf('@')).slice(2, -1);
-  console.log("Location:",location);
+  //console.log("Location:",location);
 
   stringyThing = stringyThing.substr(0, stringyThing.indexOf('@')-1).slice(16); //-1 to eat space
 
   // EVENT NAME
   thisEvent.eventName = stringyThing.slice(0, stringyThing.lastIndexOf('-')-1); //-1 to eat space
-  console.log("Event Name:",eventName);
+  //console.log("Event Name:",eventName);
 
   var dateString = stringyThing.slice( (stringyThing.lastIndexOf('-') + 2));
   var timeFrame = dateString.slice(dateString.lastIndexOf('from'));
 
   // DATE
   thisEvent.dateString = dateString.slice(0, dateString.lastIndexOf('from'));
-  console.log("Date:",dateString);
+  //console.log("Date:",dateString);
 
   // TIME
   thisEvent.timeFrame = timeFrame.slice(5);
-  console.log("Timeframe:",timeFrame);
+  //console.log("Timeframe:",timeFrame);
 
-  thisEvent.timeFrameEnd = timeFrame.slice( (timeFrame.indexOf('to') + 3));
-  thisEvent.timeFrameEnd = crappyMethodtoHelpConvertPMToMilTime(timeFrameEnd);
+  thisEvent.timeFrameEnd = timeFrame.slice( (thisEvent.timeFrame.indexOf('to') + 3));
+  //thisEvent.timeFrameEnd = crappyMethodtoHelpConvertPMToMilTime(thisEvent.timeFrameEnd);
 
   // EVENT DURATION
-  thisEvent.eventDuration = eventDurationFinder();
-  console.log("Event Duration:", eventDuration);
+  //thisEvent.eventDuration = eventDurationFinder();
+  //console.log("Event Duration:", eventDuration);
 
 }
-
+/*
 //func that finds out how many hours:minutes an event lasts based on start:finish
 function eventDurationFinder() {
 
@@ -74,8 +74,8 @@ function eventDurationFinder() {
   var dura = (parseInt(endingHours) - parseInt(startHours)).toString();
   dura = dura.concat(":").concat(duraMinutes);
   return dura;
-}
-
+}*/
+/*
 // crappy helper func that takes a PM time and converts to 24H time
 function crappyMethodtoHelpConvertPMToMilTime( stringToUse ) {
 
@@ -123,3 +123,4 @@ function timeCompare(){
 //FUNC CALLS HERE
 parseString(rofl);
 timeCompare(rofl);
+*/

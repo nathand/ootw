@@ -4,27 +4,30 @@ block content
   header.bar.bar-nav
     h1.title Dodge
   div.content
-    p.content-padded Event-based traffic avoidance.
+    p.lead.content-padded Event-based traffic avoidance.
     div#map.content-padded
 
-    div.segmented-control
+    div.segmented-control.content-padded
       a.control-item.active(href="#today") Today
-      a.control-item(href="#tomorrow") Tomorrow
+      //- a.control-item(href="#tomorrow") Tomorrow
       
-    div.card
-      span#today.control-content.active Valentine's Day Generic Event
-      span#tomorrow.control-content Chinese New Year's Festival
+    div.card#events
+      //- span#today.control-content.active
+      ul.table-view#today.control-content.active
+        li.table-view-cell
+          p Valentine's Day
+
+      //- ul.table-view#tomorrow.control-content
+      //-   li.table-view-cell
+      //-     p Fireworks Show
+      //-   li.table-view-cell
+      //-     p Chinese New Year's Festival
+
+      //- span#tomorrow.control-content
+      //- p#tomorrow.control-content 
+
 
       //- ul.table-view
       //-   li.table-view-cell
-      //-     a.push-right(href="#")
-      //-       strong Ratchet docs
       //-   li.table-view-cell
-      //-     a.push-right(href="#")
-      //-       strong Ratchet docs
-      //-   li.table-view-cell
-      //-     a.push-right(href="#")
-      //-       strong Ratchet docs
-      //-   li.table-view-cell
-      //-     a.push-right(href="#")
-      //-       strong Ratchet docs
+
